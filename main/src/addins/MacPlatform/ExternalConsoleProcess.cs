@@ -88,7 +88,7 @@ bash pause on exit trick
 			
 			//build the sh command
 			var sb = new StringBuilder ();
-			sb.AppendFormat ("cd \"{0}\"; ", Escape (workingDirectory));
+			sb.AppendFormat ("clear;cd \"{0}\"; ", Escape (workingDirectory));
 			foreach (string env in environmentVariables.Keys)
 				sb.AppendFormat ("{0}=\"{1}\" ", env, Escape (environmentVariables[env]));
 			sb.AppendFormat ("{0} {1}", Escape (command), arguments);
